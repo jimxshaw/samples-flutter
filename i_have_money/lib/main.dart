@@ -12,8 +12,7 @@ void main() {
         backgroundColor: HexColor('#7D7D7D'),
         body: Center(
           child: Image(
-            image: NetworkImage(
-                'https://thejewelerblog.files.wordpress.com/2017/07/carmenlucia2.jpg'),
+            image: AssetImage('images/ruby.jpeg'),
           ),
         ),
       ),
