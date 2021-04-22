@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 
 void main() {
   runApp(
-    MyApp()
+      MyApp()
   );
 }
 
@@ -17,8 +17,27 @@ class MyApp extends StatelessWidget {
           child: Column(
             children: [
               CircleAvatar(
-                radius: 50.0,
+                radius: 40.0,
                 backgroundImage: AssetImage('images/profile_pic.jpg'),
+              ),
+              Text(
+                'James Shaw',
+                style: TextStyle(
+                  fontFamily: 'Pacifico',
+                  fontSize: 30.0,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold
+                ),
+              ),
+              Text(
+                'Software Engineer',
+                style: TextStyle(
+                  fontFamily: 'SourceSansPro',
+                  fontSize: 20.0,
+                  color: Colors.white,
+                  letterSpacing: 2.5,
+                  fontWeight: FontWeight.bold
+                ),
               ),
             ],
           ),
