@@ -13,6 +13,7 @@ class MyApp extends StatelessWidget {
         backgroundColor: HexColor('#226cb6'),
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 40.0,
@@ -37,24 +38,10 @@ class MyApp extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
-              Card(
-                margin: EdgeInsets.symmetric(
-                  vertical: 10.0,
-                  horizontal: 25.0,
-                ),
-                child: ListTile(
-                  leading: Icon(
-                    Icons.phone_iphone,
-                    color: HexColor('#226cb6'),
-                  ),
-                  title: Text(
-                    '(555) 123-4567',
-                    style: TextStyle(
-                        color: HexColor('#226cb6'),
-                        fontFamily: 'SourceSansPro',
-                        fontSize: 20.0),
-                  )
-                ),
+              SizedBox(
+                height: 20.0,
+                width: 150.0,
+                child: Divider(color: Colors.white),
               ),
               Card(
                 margin: EdgeInsets.symmetric(
@@ -62,18 +49,35 @@ class MyApp extends StatelessWidget {
                   horizontal: 25.0,
                 ),
                 child: ListTile(
-                  leading:
-                    Icon(
-                      Icons.email,
+                    leading: Icon(
+                      Icons.phone_iphone,
                       color: HexColor('#226cb6'),
                     ),
                     title: Text(
-                      'sample123@gmail.com',
+                      '(555) 123-4567',
                       style: TextStyle(
                           color: HexColor('#226cb6'),
                           fontFamily: 'SourceSansPro',
                           fontSize: 20.0),
-                    ),
+                    )),
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(
+                  vertical: 10.0,
+                  horizontal: 25.0,
+                ),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: HexColor('#226cb6'),
+                  ),
+                  title: Text(
+                    'sample123@gmail.com',
+                    style: TextStyle(
+                        color: HexColor('#226cb6'),
+                        fontFamily: 'SourceSansPro',
+                        fontSize: 20.0),
+                  ),
                 ),
               ),
             ],
