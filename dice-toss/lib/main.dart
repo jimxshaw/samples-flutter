@@ -8,6 +8,7 @@ void main() {
         backgroundColor: HexColor('#7FBA00'),
         appBar: AppBar(
           title: Text('Dice Toss'),
+          centerTitle: true,
           backgroundColor: HexColor('#7FBA00'),
         ),
         body: DicePage(),
@@ -19,15 +20,17 @@ void main() {
 class DicePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        Expanded(
-          child: Image.asset('images/dice1.png'),
-        ),
-        Expanded(
-          child: Image.asset('images/dice1.png'),
-        ),
-      ],
+    return Center(
+      child: Row(
+        children: [
+          Expanded(
+            child: Image.asset('images/dice1.png'),
+          ),
+          Expanded(
+            child: Image.asset('images/dice1.png'),
+          ),
+        ],
+      ),
     );
   }
 }
