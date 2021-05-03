@@ -13,14 +13,79 @@ class MusicBarsApp extends StatelessWidget {
     return MaterialApp(
       home: Scaffold(
         body: SafeArea(
-          child: Center(
-            child: TextButton(
-              onPressed: () {
-                final player = AudioCache();
-                player.play('note1.wav');
-              },
-              child: Text('Click me!'),
-            ),
+          child: Column(
+            children: [
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note1.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.purple,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note2.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.indigo,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note3.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.blue,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note4.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.green,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note5.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.yellow,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note6.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.orange,
+                ),
+              ),
+              TextButton(
+                onPressed: () {
+                  final player = AudioCache();
+                  player.play('note7.wav');
+                },
+                child: Text(''),
+                style: TextButton.styleFrom(
+                  backgroundColor: Colors.red,
+                ),
+              ),
+            ],
           ),
         ),
       ),
