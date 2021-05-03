@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:magic_8_ball/util/hexcolor.dart';
+import 'dart:math';
 
 void main() => runApp(
       MaterialApp(
@@ -21,14 +22,18 @@ class Ball extends StatefulWidget {
 }
 
 class _BallState extends State<Ball> {
+  int ballNumber = 1;
+
   @override
   Widget build(BuildContext context) {
     return Center(
       child: TextButton(
         onPressed: () {
-          print('I got pressed!');
+          setState(() {
+            ballNumber = Random().nextInt(4) + 1;
+          });
         },
-        child: Image.asset('images/ball1.png'),
+        child: Image.asset('images/ball$ballNumber.png'),
       ),
     );
   }
