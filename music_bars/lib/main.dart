@@ -6,7 +6,10 @@ void main() {
 }
 
 class MusicBarsApp extends StatelessWidget {
-  const MusicBarsApp({Key key}) : super(key: key);
+  void playSound(int soundNumber) {
+    final player = AudioCache();
+    player.play('note$soundNumber.wav');
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -17,8 +20,7 @@ class MusicBarsApp extends StatelessWidget {
             children: [
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note1.wav');
+                  playSound(1);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -27,8 +29,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note2.wav');
+                  playSound(2);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -37,8 +38,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note3.wav');
+                  playSound(3);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -47,8 +47,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note4.wav');
+                  playSound(4);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -57,8 +56,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note5.wav');
+                  playSound(5);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -67,8 +65,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note6.wav');
+                  playSound(6);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
@@ -77,8 +74,7 @@ class MusicBarsApp extends StatelessWidget {
               ),
               TextButton(
                 onPressed: () {
-                  final player = AudioCache();
-                  player.play('note7.wav');
+                  playSound(7);
                 },
                 child: Text(''),
                 style: TextButton.styleFrom(
