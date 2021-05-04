@@ -11,7 +11,7 @@ class MusicBarsApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
-  Expanded buildKey(int soundNumber, MaterialColor color) {
+  Expanded buildKey({int soundNumber, MaterialColor color}) {
     return Expanded(
       child: TextButton(
         onPressed: () {
@@ -34,13 +34,13 @@ class MusicBarsApp extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: [
-              buildKey(1, Colors.purple),
-              buildKey(2, Colors.indigo),
-              buildKey(3, Colors.blue),
-              buildKey(4, Colors.green),
-              buildKey(5, Colors.yellow),
-              buildKey(6, Colors.orange),
-              buildKey(7, Colors.red),
+              buildKey(soundNumber: 1, color: Colors.purple),
+              buildKey(soundNumber: 2, color: Colors.indigo),
+              buildKey(soundNumber: 3, color: Colors.blue),
+              buildKey(soundNumber: 4, color: Colors.green),
+              buildKey(soundNumber: 5, color: Colors.yellow),
+              buildKey(soundNumber: 6, color: Colors.orange),
+              buildKey(soundNumber: 7, color: Colors.red),
             ],
           ),
         ),
