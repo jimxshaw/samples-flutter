@@ -11,7 +11,7 @@ class MusicBarsApp extends StatelessWidget {
     player.play('note$soundNumber.wav');
   }
 
-  Expanded buildKey({int soundNumber, MaterialColor color}) {
+  Widget buildKey({int soundNumber, Color color}) {
     return Expanded(
       child: TextButton(
         onPressed: () {
