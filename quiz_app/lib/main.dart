@@ -85,7 +85,7 @@ class _QuizPageState extends State<QuizPage> {
           ),
         ),
         Row(
-          children: [
+          children: <Widget>[
             Icon(
               Icons.check,
               color: Colors.green,
