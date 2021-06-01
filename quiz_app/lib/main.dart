@@ -25,27 +25,12 @@ class QuizPage extends StatefulWidget {
 }
 
 class _QuizPageState extends State<QuizPage> {
-  List<Icon> scoreKeeper = [
-    Icon(
-      Icons.check,
-      color: Colors.green,
-    ),
-    Icon(
-      Icons.close,
-      color: Colors.red,
-    ),
-    Icon(
-      Icons.close,
-      color: Colors.red,
-    ),
-    Icon(
-      Icons.check,
-      color: Colors.green,
-    ),
-    Icon(
-      Icons.check,
-      color: Colors.green,
-    ),
+  List<Icon> scoreKeeper = [];
+
+  List<String> questions = [
+    'The Romans conquered Hispania.',
+    'A spider is an insect.',
+    'The closest star to Earth is the Sun.'
   ];
 
   @override
@@ -86,14 +71,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  scoreKeeper.add(
-                    Icon(
-                      Icons.check,
-                      color: Colors.green,
-                    ),
-                  );
-                });
+
               },
             ),
           ),
@@ -112,14 +90,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                setState(() {
-                  scoreKeeper.add(
-                    Icon(
-                      Icons.close,
-                      color: Colors.red,
-                    ),
-                  );
-                });
+
               },
             ),
           ),
@@ -132,8 +103,3 @@ class _QuizPageState extends State<QuizPage> {
   }
 }
 
-/*
-question1: 'You can lead a cow down stairs but not up stairs.', false,
-question2: 'Approximately one quarter of human bones are in the feet.', true,
-question3: 'A slug\'s blood is green.', true,
-*/
