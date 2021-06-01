@@ -28,10 +28,12 @@ class _QuizPageState extends State<QuizPage> {
   List<Icon> scoreKeeper = [];
 
   List<String> questions = [
-    'The Romans conquered Hispania.',
+    'Hispania was a Roman Empire province.',
     'A spider is an insect.',
     'The closest star to Earth is the Sun.'
   ];
+
+  int questionNumber = 0;
 
   @override
   Widget build(BuildContext context) {
@@ -46,7 +48,7 @@ class _QuizPageState extends State<QuizPage> {
             child: TextButton(
               onPressed: () {},
               child: Text(
-                'This is where the question text will go.',
+                questions[questionNumber],
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
