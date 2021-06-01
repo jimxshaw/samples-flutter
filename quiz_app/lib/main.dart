@@ -33,6 +33,8 @@ class _QuizPageState extends State<QuizPage> {
     'The closest star to Earth is the Sun.'
   ];
 
+  List<bool> answers = [true, false, true];
+
   int questionNumber = 0;
 
   @override
@@ -73,7 +75,17 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
 
+                if (correctAnswer == true) {
+                  print('user correct');
+                } else {
+                  print('user wrong');
+                }
+
+                setState(() {
+                  questionNumber++;
+                });
               },
             ),
           ),
@@ -92,7 +104,17 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
+                bool correctAnswer = answers[questionNumber];
 
+                if ( correctAnswer == false) {
+                  print('user correct');
+                } else {
+                  print('user wrong');
+                }
+
+                setState(() {
+                  questionNumber++;
+                });
               },
             ),
           ),
@@ -104,4 +126,3 @@ class _QuizPageState extends State<QuizPage> {
     );
   }
 }
-
