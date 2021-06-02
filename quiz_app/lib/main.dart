@@ -45,7 +45,7 @@ class _QuizPageState extends State<QuizPage> {
             child: TextButton(
               onPressed: () {},
               child: Text(
-                quizEngine.questionList[questionNumber].questionText,
+                quizEngine.getQuestionText(questionNumber),
                 textAlign: TextAlign.center,
                 style: TextStyle(
                   fontSize: 25.0,
@@ -70,7 +70,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                bool correctAnswer = quizEngine.questionList[questionNumber].questionAnswer;
+                bool correctAnswer = quizEngine.getQuestionAnswer(questionNumber);
 
                 if (correctAnswer == true) {
                   print('user correct');
@@ -99,7 +99,7 @@ class _QuizPageState extends State<QuizPage> {
                 ),
               ),
               onPressed: () {
-                bool correctAnswer = quizEngine.questionList[questionNumber].questionAnswer;
+                bool correctAnswer = quizEngine.getQuestionAnswer(questionNumber);
 
                 if (correctAnswer == false) {
                   print('user correct');
