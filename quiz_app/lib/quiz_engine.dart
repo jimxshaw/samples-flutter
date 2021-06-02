@@ -10,7 +10,7 @@ class QuizEngine {
   ];
 
   void nextQuestion() {
-    if (_questionNumber < _questionList.length) {
+    if (_questionNumber < _questionList.length - 1) {
       _questionNumber++;
     }
   }
