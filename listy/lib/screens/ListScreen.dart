@@ -9,6 +9,10 @@ class ListScreen extends StatelessWidget {
       appBar: AppBar(
         title: Text("My list"),
       ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        child: Icon(Icons.add),
+      ),
     );
   }
 }
