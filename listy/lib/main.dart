@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listy/screens/ListScreen.dart';
+import 'package:listy/screens/list_screen.dart';
 
 void main() {
   runApp(MyApp());
@@ -9,7 +9,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: 'Listy',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.blue,
