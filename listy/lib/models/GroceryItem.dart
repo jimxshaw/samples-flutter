@@ -33,7 +33,13 @@ class GroceryItem {
     this.purchased = json['purchased'];
   }
 
+  get categoryLabel {
+    if (this.category == null) {
+      return "-";
+    }
 
+    return GroceryItem.getStringFromCategory(this.category!);
+  }
 
   static Category getCategoryFromString(String category) {
     return GroceryItemCategoryMap.entries
