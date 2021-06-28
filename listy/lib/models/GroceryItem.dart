@@ -26,12 +26,14 @@ class GroceryItem {
   Category? category;
   bool purchased = false;
 
-  GroceryItem.fromJason(Map<String, dynamic> json) {
+  GroceryItem.fromJson(Map<String, dynamic> json) {
     this.id = json['id'];
     this.name = json['name'];
     this.category = json['category'];
     this.purchased = json['purchased'];
   }
+
+
 
   static Category getCategoryFromString(String category) {
     return GroceryItemCategoryMap.entries
