@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:listy/screens/ListScreen.dart';
+import 'package:listy/screens/list_screen.dart';
 
 void main() {
   runApp(MyApp());
