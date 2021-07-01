@@ -22,14 +22,14 @@ const GroceryItemCategoryMap = {
 
 class GroceryItem {
   int? id;
-  String? name;
+  String name = "";
   Category? category;
   bool purchased = false;
 
   GroceryItem.fromJson(Map<String, dynamic> json) {
     this.id = json['id'];
     this.name = json['name'];
-    this.category = json['category'];
+    this.category = json['category'] != null ? GroceryItem.getCategoryFromString(json['category']) : Category.Misc;
     this.purchased = json['purchased'];
   }
 
