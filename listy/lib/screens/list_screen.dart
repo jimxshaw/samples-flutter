@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listy/mocks/grocery_items_mock.dart';
+import 'package:listy/models/grocery_item.dart';
+import 'package:listy/services/grocery_item_service.dart';
 
 class ListScreen extends StatefulWidget {
   const ListScreen({key}) : super(key: key);
@@ -9,9 +11,26 @@ class ListScreen extends StatefulWidget {
 }
 
 class _ListScreenState extends State<ListScreen> {
+
+  List<GroceryItem> _items = [];
+
+  @override
+  void initState() {
+    super.initState();
+
+    _init();
+  }
+
+  Future<void> _init() async {
+    final items = await groceryItemService.list();
+
+    setState(() {
+      _items = items;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final items = groceryItems;
 
     return Scaffold(
       appBar: AppBar(
@@ -22,12 +41,12 @@ class _ListScreenState extends State<ListScreen> {
         child: Icon(Icons.add),
       ),
       body: ListView.builder(
-          itemCount: items.length,
+          itemCount: _items.length,
           itemBuilder: (context, index) {
-            final item = items[index];
+            final item = _items[index];
 
             return Card(
-              child: Text(item['name']),
+              child: Text(item.name),
             );
           }),
     );
