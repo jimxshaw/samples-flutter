@@ -1,5 +1,6 @@
 import 'package:listy/mocks/grocery_items_mock.dart';
 import 'package:listy/models/grocery_item.dart';
+import 'package:riverpod/riverpod.dart';
 
 class GroceryItemService {
   Future<List<GroceryItem>> list() async {
@@ -11,3 +12,12 @@ class GroceryItemService {
     return results;
   }
 }
+
+GroceryItemService _export() {
+  final service = Provider((ref) => GroceryItemService());
+  final container = ProviderContainer();
+
+  return container.read(service);
+}
+
+final groceryItemService = _export();
