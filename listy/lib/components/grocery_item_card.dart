@@ -33,7 +33,9 @@ class GroceryItemCard extends StatelessWidget {
               ],
             ),
             IconButton(
-                icon: Icon(Icons.check_box_outline_blank), onPressed: () {}),
+              icon: Icon(Icons.check_box_outline_blank),
+              onPressed: () {},
+            ),
           ],
         ),
       ),
