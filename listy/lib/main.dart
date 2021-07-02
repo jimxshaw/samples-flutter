@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:listy/screens/list_screen.dart';
+import 'package:listy/theme.dart';
 
 void main() {
   runApp(MyApp());
@@ -12,7 +13,7 @@ class MyApp extends StatelessWidget {
       title: 'Listy',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: ThemeColors.primary,
       ),
       home: ListScreen(),
     );
