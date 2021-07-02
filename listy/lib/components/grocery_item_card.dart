@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:listy/components/grocery_item_checkbox.dart';
 import 'package:listy/models/grocery_item.dart';
+import 'package:listy/theme.dart';
 
 class GroceryItemCard extends StatelessWidget {
   final GroceryItem groceryItem;
@@ -20,17 +21,15 @@ class GroceryItemCard extends StatelessWidget {
               children: [
                 Text(
                   groceryItem.name,
-                  style: TextStyle(fontSize: 18),
+                  style: ThemeText.bodyText,
                 ),
                 SizedBox(
                   height: 4,
                 ),
-                Container(
-                    color: Colors.amber,
-                    child: Padding(
-                      padding: const EdgeInsets.all(8.0),
-                      child: Text(groceryItem.categoryLabel),
-                    )),
+                Text(
+                  groceryItem.categoryLabel,
+                  style: ThemeText.caption,
+                ),
               ],
             ),
             GroceryItemCheckbox(
