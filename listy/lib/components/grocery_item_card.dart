@@ -1,12 +1,17 @@
 import 'package:flutter/material.dart';
 import 'package:listy/models/grocery_item.dart';
 
-class GroceryItemCard extends StatelessWidget {
+class GroceryItemCard extends StatefulWidget {
   final GroceryItem groceryItem;
 
   const GroceryItemCard({Key? key, required this.groceryItem})
       : super(key: key);
 
+  @override
+  _GroceryItemCardState createState() => _GroceryItemCardState();
+}
+
+class _GroceryItemCardState extends State<GroceryItemCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -18,7 +23,7 @@ class GroceryItemCard extends StatelessWidget {
             Column(
               children: [
                 Text(
-                  groceryItem.name,
+                  widget.groceryItem.name,
                   style: TextStyle(fontSize: 18),
                 ),
                 SizedBox(
@@ -28,7 +33,7 @@ class GroceryItemCard extends StatelessWidget {
                     color: Colors.amber,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Text(groceryItem.categoryLabel),
+                      child: Text(widget.groceryItem.categoryLabel),
                     )),
               ],
             ),
