@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:listy/components/grocery_item_card.dart';
 import 'package:listy/mocks/grocery_items_mock.dart';
 import 'package:listy/models/grocery_item.dart';
 import 'package:listy/services/grocery_item_service.dart';
@@ -45,9 +46,7 @@ class _ListScreenState extends State<ListScreen> {
           itemBuilder: (context, index) {
             final item = _items[index];
 
-            return Card(
-              child: Text(item.name),
-            );
+            return GroceryItemCard(groceryItem: item);
           }),
     );
   }
