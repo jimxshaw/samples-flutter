@@ -38,8 +38,15 @@ class _GroceryItemCardState extends State<GroceryItemCard> {
               ],
             ),
             IconButton(
-              icon: Icon(Icons.check_box_outline_blank),
-              onPressed: () {},
+              icon: Icon(
+                  widget.groceryItem.purchased ? Icons.check_box_outlined : Icons.check_box_outline_blank
+              ),
+              onPressed: () {
+                widget.groceryItem.purchased = !widget.groceryItem.purchased;
+                setState(() {
+
+                });
+              },
             ),
           ],
         ),
