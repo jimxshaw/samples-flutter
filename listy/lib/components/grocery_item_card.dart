@@ -10,7 +10,33 @@ class GroceryItemCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      child: Text(groceryItem.name),
+      child: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            Column(
+              children: [
+                Text(
+                  groceryItem.name,
+                  style: TextStyle(fontSize: 18),
+                ),
+                SizedBox(
+                  height: 4,
+                ),
+                Container(
+                    color: Colors.amber,
+                    child: Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Text(groceryItem.categoryLabel),
+                    )),
+              ],
+            ),
+            IconButton(
+                icon: Icon(Icons.check_box_outline_blank), onPressed: () {}),
+          ],
+        ),
+      ),
     );
   }
 }
