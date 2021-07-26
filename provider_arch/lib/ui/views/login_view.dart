@@ -11,6 +11,8 @@ class LoginView extends StatefulWidget {
 }
 
 class _LoginViewState extends State<LoginView> {
+  final TextEditingController controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<LoginModel>(
@@ -22,7 +24,9 @@ class _LoginViewState extends State<LoginView> {
             mainAxisSize: MainAxisSize.max,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              LoginHeader(),
+              LoginHeader(
+                controller: controller,
+              ),
               TextButton(
                 style: TextButton.styleFrom(primary: Colors.white),
                 child: Text(
