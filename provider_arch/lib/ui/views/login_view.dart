@@ -40,6 +40,7 @@ class _LoginViewState extends State<LoginView> {
 
                         if (loginSuccess) {
                           // Navigate to the home view.
+                          Navigator.pushNamed(context, '/');
                         }
                       },
                     ),
