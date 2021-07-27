@@ -27,14 +27,22 @@ class _LoginViewState extends State<LoginView> {
               LoginHeader(
                 controller: controller,
               ),
-              TextButton(
-                style: TextButton.styleFrom(primary: Colors.white),
-                child: Text(
-                  'Login',
-                  style: TextStyle(color: Colors.black),
-                ),
-                onPressed: () async {},
-              ),
+              model.state == ViewState.Busy
+                  ? CircularProgressIndicator()
+                  : TextButton(
+                      style: TextButton.styleFrom(primary: Colors.white),
+                      child: Text(
+                        'Login',
+                        style: TextStyle(color: Colors.black),
+                      ),
+                      onPressed: () async {
+                        var loginSuccess = await model.login(controller.text);
+
+                        if (loginSuccess) {
+                          // Navigate to the home view.
+                        }
+                      },
+                    ),
             ],
           ),
         ),
