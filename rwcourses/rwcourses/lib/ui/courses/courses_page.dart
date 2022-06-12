@@ -24,6 +24,7 @@ class _CoursesPageState extends State<CoursesPage> {
           final courses = snapshot.data;
 
           if (courses == null) {
+            // Convery to users that there's background network activity.
             return const Center(child: CircularProgressIndicator());
           }
 
