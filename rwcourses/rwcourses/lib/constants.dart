@@ -19,3 +19,4 @@ class Constants {
   static const int otherFilter = -1;
 
   static const String filterKey = 'FILTER_KEY';
+}
