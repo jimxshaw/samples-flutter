@@ -1,8 +1,8 @@
-import 'dart:html';
-
+import 'dart:convert';
 import '../model/course.dart';
 import '../repository/repository.dart';
 import '../constants.dart';
+import 'package:http/http.dart' as http;
 
 class CourseRepository implements Repository {
   String dataURL =
@@ -16,6 +16,12 @@ class CourseRepository implements Repository {
     if (domainFilter != Constants.allFilter) {
       url += ';&filter[domain_ids][]=$domainFilter';
     }
+
+    final uri = Uri.parse(url);
+    final response = await http.get(uri);
+    final apiResponse = json.decode(response.body) as Map<String, dynamic>;
+
+    print(apiResponse);
 
     return courses;
   }

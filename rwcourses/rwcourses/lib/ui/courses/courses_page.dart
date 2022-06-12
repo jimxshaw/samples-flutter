@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:rwcourses/constants.dart';
+import 'courses_controller.dart';
+import '../../model/course.dart';
 
 class CoursesPage extends StatefulWidget {
   const CoursesPage({Key? key}) : super(key: key);
@@ -8,8 +11,24 @@ class CoursesPage extends StatefulWidget {
 }
 
 class _CoursesPageState extends State<CoursesPage> {
+  final _controller = CoursesController();
+
   @override
   Widget build(BuildContext context) {
-    return const Text('RWCourses');
+    return FutureBuilder<List<Course>>(
+        future: _controller.fetchCourses(Constants.allFilter),
+        builder: (context, snapshot) {
+          // The snapshot will contain various states of the
+          // Future as it comes back. Data property will
+          // contain the courses.
+          final courses = snapshot.data;
+
+          if (courses == null) {
+            // Convery to users that there's background network activity.
+            return const Center(child: CircularProgressIndicator());
+          }
+
+          return const Text('RWCourses');
+        });
   }
 }
