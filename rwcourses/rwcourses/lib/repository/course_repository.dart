@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import '../model/course.dart';
 import '../repository/repository.dart';
 import '../constants.dart';
