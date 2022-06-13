@@ -28,6 +28,7 @@ extension DomainExtension on Domain {
       case Domain.macos:
         return Strings.macos;
       case Domain.archived:
+        return Strings.archived;
       default:
         return Strings.unknown;
     }
